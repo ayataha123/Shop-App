@@ -16,7 +16,7 @@ class SizeDots extends StatefulWidget {
 
 class _SizeDotsState extends State<SizeDots> {
   final int id = 0;
-  int selectedColor = 1;
+  int selectedSize = 1;
   @override
   Widget build(BuildContext context) {
     return widget.product.availableProperties[id].size != null
@@ -27,10 +27,10 @@ class _SizeDotsState extends State<SizeDots> {
                 ...List.generate(
                   widget.product.availableProperties[id].size!.length,
                   (index) =>  PropertyDot(
-                        isSelected: index == selectedColor,
+                        isSelected: index == selectedSize,
                         onTap: () {
                           setState(() {
-                            selectedColor = index;
+                            selectedSize = index;
                           });
                         },
                         height: 40,

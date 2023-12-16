@@ -22,7 +22,7 @@ class DetailsScreen extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          ProductImages(product: product),
+          ProductImages(product: product,),
           const SizedBox(
             height: 16,
           ),
@@ -68,14 +68,8 @@ class DetailsScreen extends StatelessWidget {
           MaterialDots(
             product: product,
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Text('Describtion',
-                style: TextStyle(fontWeight: FontWeight.bold)),
-          ),
-          const SizedBox(
-            height: 16,
-          ),
+          
+
         ],
       ),
     );

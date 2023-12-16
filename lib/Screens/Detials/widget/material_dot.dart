@@ -16,7 +16,7 @@ class MaterialDots extends StatefulWidget {
 
 class _MaterialDotsState extends State<MaterialDots> {
   final int id = 0;
-  int selectedColor = 1;
+  int selectedMaterial = 1;
   @override
   Widget build(BuildContext context) {
     return widget.product.availableProperties[id].material != null
@@ -26,31 +26,36 @@ class _MaterialDotsState extends State<MaterialDots> {
               children: [
                 ...List.generate(
                   widget.product.availableProperties[id].material!.length,
-                  (index) =>  PropertyDot(
-                        isSelected: index == selectedColor,
-                        onTap: () {
-                          setState(() {
-                            selectedColor = index;
-                          });
-                        },
-                        height: 40,
-                        width: 100,
-                        shape: BoxShape.rectangle,
-                        color: Colors.amber,
-                        child: Center(
-                          child: Text(
-                            widget.product.availableProperties[id].material![index],
-                            style:const TextStyle(color: Colors.black),
-                          ),
-                        ),
+                  (index) => PropertyDot(
+                    isSelected: index == selectedMaterial,
+                    onTap: () {
+                      setState(() {
+                        selectedMaterial = index;
+                      });
+                    },
+                    height: 40,
+                    width: 100,
+                    shape: BoxShape.rectangle,
+                    color: Colors.amber,
+                    child: Center(
+                      child: Text(
+                        widget.product.availableProperties[id].material![index],
+                        style: const TextStyle(color: Colors.black),
                       ),
+                    ),
                   ),
+                ),
               ],
             ),
           )
         : const SizedBox(
-          height: 50,
-          child: Center(child: Text('No Material Available',style: TextStyle(fontWeight: FontWeight.bold),)),
-        );
+            height: 50,
+            child: Center(
+                child: Text(
+              'No Material Available',
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.amber),
+            )),
+          );
   }
 }
