@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+import '../../model/product.dart';
+import 'widget/color_dot.dart';
+import 'widget/product_images.dart';
+import 'widget/product_meta_data.dart';
+
+class DetailsScreen extends StatelessWidget {
+  const DetailsScreen({super.key});
+
+static String routeName = "/details";
+
+  @override
+  Widget build(BuildContext context) {
+    final ProductDetailsArguments agrs =
+        ModalRoute.of(context)!.settings.arguments as ProductDetailsArguments;
+        final product = agrs.product;
+    return Scaffold(
+         body: ListView(
+        children: [
+          const SizedBox(height: 16,),
+          ProductImages(product: product),
+          const SizedBox(height: 16,),
+         ProductMetaData(product: product),
+          const SizedBox(height: 8,),
+          ColorDots(product: product,),
+           const SizedBox(height: 8,),
+        const Padding(
+           padding: EdgeInsets.symmetric(horizontal: 16),
+           child:   Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Select Size',style: TextStyle(fontWeight: FontWeight.bold)),
+                Text('Size Chart',style: TextStyle(fontWeight: FontWeight.bold)),
+              ],
+             ),
+         ),
+         
+          
+        ],
+      ),
+    );
+  }
+}
+
+
+class ProductDetailsArguments {
+  final Product product;
+
+  ProductDetailsArguments({required this.product});
+}
