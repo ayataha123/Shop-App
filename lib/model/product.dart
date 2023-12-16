@@ -165,7 +165,7 @@ List<Product> demoProducts = [
       availableProperties: [
         ProductProperty(size: [
           'Small',
-          'Large'
+          'Large',
         ], colors: [
           Colors.black,
           Colors.red,

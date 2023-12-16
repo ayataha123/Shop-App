@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../../../model/product.dart';
 import 'property_dot.dart';
 
-class SizeDots extends StatefulWidget {
-  const SizeDots({
+class MaterialDots extends StatefulWidget {
+  const MaterialDots({
     Key? key,
     required this.product,
   }) : super(key: key);
@@ -11,21 +11,21 @@ class SizeDots extends StatefulWidget {
   final Product product;
 
   @override
-  State<SizeDots> createState() => _SizeDotsState();
+  State<MaterialDots> createState() => _MaterialDotsState();
 }
 
-class _SizeDotsState extends State<SizeDots> {
+class _MaterialDotsState extends State<MaterialDots> {
   final int id = 0;
   int selectedColor = 1;
   @override
   Widget build(BuildContext context) {
-    return widget.product.availableProperties[id].size != null
+    return widget.product.availableProperties[id].material != null
         ? Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
                 ...List.generate(
-                  widget.product.availableProperties[id].size!.length,
+                  widget.product.availableProperties[id].material!.length,
                   (index) =>  PropertyDot(
                         isSelected: index == selectedColor,
                         onTap: () {
@@ -39,7 +39,7 @@ class _SizeDotsState extends State<SizeDots> {
                         color: Colors.amber,
                         child: Center(
                           child: Text(
-                            widget.product.availableProperties[id].size![index],
+                            widget.product.availableProperties[id].material![index],
                             style:const TextStyle(color: Colors.black),
                           ),
                         ),
@@ -48,6 +48,9 @@ class _SizeDotsState extends State<SizeDots> {
               ],
             ),
           )
-        : const SizedBox();
+        : const SizedBox(
+          height: 50,
+          child: Center(child: Text('No Material Available',style: TextStyle(fontWeight: FontWeight.bold),)),
+        );
   }
 }

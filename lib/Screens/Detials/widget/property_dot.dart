@@ -10,14 +10,14 @@ class PropertyDot extends StatelessWidget {
     this.onTap,
     required this.height,
     required this.width,
-    required this.shape,
+    required this.shape, this.child,
   }) : super(key: key);
 
   final Color ?color;
   final bool isSelected;
   final void Function()? onTap;
   final double height, width;
-
+ final Widget? child;
   final BoxShape shape;
 
   @override
@@ -25,7 +25,7 @@ class PropertyDot extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: const EdgeInsets.only(right: 4),
+        margin: const EdgeInsets.only(right: 8),
         padding: const EdgeInsets.all(8),
         height: height,
         width: width,
@@ -35,11 +35,7 @@ class PropertyDot extends StatelessWidget {
               Border.all(color: isSelected ? kPrimaryColor : color!, width: 4),
           shape: shape,
         ),
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            shape: shape,
-          ),
-        ),
+        child: child
       ),
     );
   }

@@ -38,6 +38,11 @@ class _ColorDotsState extends State<ColorDots> {
                     height: 40,
                     width: 40,
                     shape: BoxShape.circle,
+                    child: const DecoratedBox(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                      ),
+                    ),
                   ),
                 ),
               ],
