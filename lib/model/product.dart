@@ -147,7 +147,6 @@ List<Product> demoProducts = [
               'assets/images/product2image2.jpeg',
             ],
             productPropertiesValues: [
-              ProductPropertyAndValue(property: 'Material', value: 'mdf wood'),
               ProductPropertyAndValue(property: 'Size', value: 'One Size')
             ])
       ]),
@@ -183,8 +182,6 @@ List<Product> demoProducts = [
               'assets/images/product3image3.jpeg',
             ],
             productPropertiesValues: [
-              ProductPropertyAndValue(
-                  property: 'Color', value: Colors.black.toString()),
               ProductPropertyAndValue(property: 'Size', value: 'Large'),
               ProductPropertyAndValue(property: 'Size', value: 'Small'),
             ]),
@@ -197,8 +194,6 @@ List<Product> demoProducts = [
               'assets/images/product3image6.jpeg',
             ],
             productPropertiesValues: [
-              ProductPropertyAndValue(
-                  property: 'Color', value: Colors.red.toString()),
               ProductPropertyAndValue(property: 'Size', value: 'Small'),
             ]),
       ])
