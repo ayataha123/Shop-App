@@ -7,9 +7,11 @@ class ColorDots extends StatefulWidget {
   const ColorDots({
     Key? key,
     required this.product,
+    required this.onColorSelected,
   }) : super(key: key);
 
   final Product product;
+  final ValueChanged<int> onColorSelected;
 
   @override
   State<ColorDots> createState() => _ColorDotsState();
@@ -20,47 +22,34 @@ class _ColorDotsState extends State<ColorDots> {
   int id = 0;
   @override
   Widget build(BuildContext context) {
-    return widget.product.availableProperties[id].colors != null
-        ? Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ...List.generate(
-                    widget.product.availableProperties[id].colors!.length,
-                    (index) {
-                  return PropertyDot(
-                    color:
-                        widget.product.availableProperties[id].colors![index],
-                    isSelected: index == selectedColor,
-                    onTap: () {
-                       
-                      setState(() {
-                        selectedColor = index;
-                        ProductImages(product:widget.product ,id: selectedColor,);
-                      });
-                    },
-                    height: 40,
-                    width: 40,
-                    shape: BoxShape.circle,
-                    child: const DecoratedBox(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  );
-                }),
-              ],
-            ),
-          )
-        : const SizedBox(
-            height: 50,
-            child: Center(
-                child: Text(
-              'There is No Anther Color',
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.amber),
-            )),
-          );
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ...List.generate(
+              widget.product.availableProperties[id].colors!.length, (index) {
+            return PropertyDot(
+              color: widget.product.availableProperties[id].colors![index],
+              isSelected: index == selectedColor,
+              onTap: () {
+                setState(() {
+                  selectedColor = index;
+                  widget.onColorSelected(selectedColor);
+                });
+              },
+              height: 40,
+              width: 40,
+              shape: BoxShape.circle,
+              child: const DecoratedBox(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                ),
+              ),
+            );
+          }),
+        ],
+      ),
+    );
   }
 }

@@ -7,11 +7,11 @@ class ProductImages extends StatefulWidget {
   ProductImages({
     Key? key,
     required this.product,
-    this.id = 0,
+   required this.id 
   }) : super(key: key);
 
   final Product product;
-  int id;
+ final int id;
   @override
   _ProductImagesState createState() => _ProductImagesState();
 }

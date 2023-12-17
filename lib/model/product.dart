@@ -116,10 +116,11 @@ List<Product> demoProducts = [
         ProductProperty(
           material: ['mdf wood'],
           size: ['One Size'],
+          colors: [Colors.purple]
         )
       ],
       variations: [
-        ProductVariation(id: 0, productId: 2,color: Colors.white ,productVarientImages: [
+        ProductVariation(id: 0, productId: 2,color: Colors.purple ,productVarientImages: [
           'assets/images/product2image1.jpeg',
           'assets/images/product2image2.jpeg',
         ], productPropertiesValues: [

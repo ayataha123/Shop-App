@@ -7,11 +7,18 @@ import 'widget/product_images.dart';
 import 'widget/product_meta_data.dart';
 import 'widget/size_dot.dart';
 
-class DetailsScreen extends StatelessWidget {
+class DetailsScreen extends StatefulWidget {
   const DetailsScreen({super.key});
 
   static String routeName = "/details";
 
+  @override
+  State<DetailsScreen> createState() => _DetailsScreenState();
+}
+
+class _DetailsScreenState extends State<DetailsScreen> {
+
+  int selectedColor=0;
   @override
   Widget build(BuildContext context) {
     final ProductDetailsArguments agrs =
@@ -23,7 +30,7 @@ class DetailsScreen extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          ProductImages(product: product,),
+          ProductImages(product: product, id: selectedColor,),
           const SizedBox(
             height: 16,
           ),
@@ -32,7 +39,12 @@ class DetailsScreen extends StatelessWidget {
             height: 8,
           ),
           ColorDots(
-            product: product,
+            product: product, onColorSelected: (color) { 
+              setState(() {
+                selectedColor=color;
+                
+              });
+             },
           ),
           const SizedBox(
             height: 8,
