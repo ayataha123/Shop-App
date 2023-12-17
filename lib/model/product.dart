@@ -73,7 +73,7 @@ List<Product> demoProducts = [
         'One Size'
       ], colors: [
         Colors.black,
-        Colors.red,
+        Colors.purple,
         Colors.orange,
       ])
     ],
@@ -85,7 +85,7 @@ List<Product> demoProducts = [
       ], productPropertiesValues: [
         ProductPropertyAndValue(property: 'Size', value: 'One Size'),
       ]),
-      ProductVariation(id: 1, productId: 1,color:Colors.red, productVarientImages: [
+      ProductVariation(id: 1, productId: 1,color:Colors.purple, productVarientImages: [
         'assets/images/product1image4.jpeg',
         'assets/images/product1image5.jpeg',
         'assets/images/product1image6.jpeg',
