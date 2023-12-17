@@ -23,6 +23,7 @@ class _MaterialDotsState extends State<MaterialDots> {
         ? Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
+             mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ...List.generate(
                   widget.product.availableProperties[id].material!.length,
@@ -38,9 +39,11 @@ class _MaterialDotsState extends State<MaterialDots> {
                     shape: BoxShape.rectangle,
                     color: Colors.amber,
                     child: Center(
-                      child: Text(
-                        widget.product.availableProperties[id].material![index],
-                        style: const TextStyle(color: Colors.black),
+                      child: Center(
+                        child: Text(
+                          widget.product.availableProperties[id].material![index],
+                          style: const TextStyle(color: Colors.black),
+                        ),
                       ),
                     ),
                   ),

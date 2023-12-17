@@ -23,6 +23,7 @@ class _SizeDotsState extends State<SizeDots> {
         ? Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ...List.generate(
                   widget.product.availableProperties[id].size!.length,
@@ -34,7 +35,7 @@ class _SizeDotsState extends State<SizeDots> {
                           });
                         },
                         height: 40,
-                        width: 100,
+                        width: 80,
                         shape: BoxShape.rectangle,
                         color: Colors.amber,
                         child: Center(

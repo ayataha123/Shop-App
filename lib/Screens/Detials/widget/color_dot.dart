@@ -23,6 +23,7 @@ class _ColorDotsState extends State<ColorDots> {
         ? Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ...List.generate(
                     widget.product.availableProperties[id].colors!.length,

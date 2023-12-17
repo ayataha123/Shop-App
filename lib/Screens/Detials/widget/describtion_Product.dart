@@ -3,27 +3,33 @@ import '../../../model/product.dart';
 
 class Describtion extends StatelessWidget {
   const Describtion({super.key, required this.product});
-final Product product;
+  final Product product;
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Material(
-              elevation: 10,
-              borderRadius: BorderRadius.circular(8.0),
-              child: Padding(
-                padding:const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                   const Text('Description',style: TextStyle(fontWeight: FontWeight.bold),),
-                   const SizedBox(height: 16,),
-                    Text(
-                     product.description ,
-                      style:const TextStyle(fontSize: 16.0),
-               ),
-                  ],
-                ) ),
-     ),
-    ) ;}
+        elevation: 10,
+        borderRadius: BorderRadius.circular(8.0),
+        child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Description',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  product.description,
+                  style: const TextStyle(fontSize: 16.0),
+                ),
+              ],
+            )),
+      ),
+    );
+  }
 }

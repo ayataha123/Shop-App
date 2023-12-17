@@ -141,6 +141,7 @@ List<Product> demoProducts = [
         ProductProperty(size: [
           'Small',
           'Large',
+          'Meduim'
         ], colors: [
           Colors.black,
           Colors.red,
