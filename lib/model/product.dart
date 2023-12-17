@@ -168,9 +168,9 @@ List<Product> demoProducts = [
 ];
 
 const String description1 =
-    "DESIGN DETAILS : Printed kalamkari design with outline hand embroidery done using traditional Kashmiri needle known as “Sozni Work”  …";
+    "DESIGN DETAILS : Printed kalamkari design with outline hand embroidery done using traditional Kashmiri needle known as “Sozni Work”";
 const String description2 =
-    "Don't know what to serve your guests? cheese on a wooden platter can never fail you …";
+    "Don't know what to serve your guests? cheese on a wooden platter can never fail you ";
 
     const String description3 =
-    "It has been tailored with premium quality fabric, which will feel soft against your skin. Ideal for any casual occasion …";
+    "It has been tailored with premium quality fabric, which will feel soft against your skin. Ideal for any casual occasion ";
