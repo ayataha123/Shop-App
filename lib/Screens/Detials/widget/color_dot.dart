@@ -15,22 +15,23 @@ class ColorDots extends StatefulWidget {
 }
 
 class _ColorDotsState extends State<ColorDots> {
-  final int id = 0;
   int selectedColor = 1;
+  int id=0;
   @override
   Widget build(BuildContext context) {
-    return widget.product.availableProperties[id].colors != null
+    return widget.product.availableProperties[0].colors != null
         ? Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
                 ...List.generate(
-                  widget.product.availableProperties[id].colors!.length,
-                  (index) => PropertyDot(
-                    color:
-                        widget.product.availableProperties[id].colors![index],
+                    widget.product.availableProperties[id].colors!.length,
+                    (index) {
+                  return PropertyDot(
+                    color: widget.product.availableProperties[id].colors![index],
                     isSelected: index == selectedColor,
                     onTap: () {
+                      
                       setState(() {
                         selectedColor = index;
                       });
@@ -43,8 +44,8 @@ class _ColorDotsState extends State<ColorDots> {
                         shape: BoxShape.circle,
                       ),
                     ),
-                  ),
-                ),
+                  );
+                }),
               ],
             ),
           )

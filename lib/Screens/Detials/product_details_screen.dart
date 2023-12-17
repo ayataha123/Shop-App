@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../model/product.dart';
 import 'widget/color_dot.dart';
+import 'widget/describtion_Product.dart';
 import 'widget/material_dot.dart';
 import 'widget/product_images.dart';
 import 'widget/product_meta_data.dart';
@@ -69,7 +70,7 @@ class DetailsScreen extends StatelessWidget {
             product: product,
           ),
           
-
+        Describtion(product: product,),
         ],
       ),
     );
