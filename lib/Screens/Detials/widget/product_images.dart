@@ -28,7 +28,7 @@ class _ProductImagesState extends State<ProductImages> {
           child: AspectRatio(
             aspectRatio: 1,
             child: Image.asset(widget.product.variations[id].productVarientImages[selectedImage]),
-          ),
+  ),
         ),
         const SizedBox(height: 20),
         Row(

@@ -13,8 +13,8 @@ class Product {
   final List<ProductProperty> availableProperties;
 
   Product({
-    required this.price
-    ,required this.id,
+    required this.price,
+    required this.id,
     required this.name,
     required this.description,
     required this.brandId,
@@ -54,15 +54,12 @@ class ProductProperty {
   ProductProperty({this.size, this.colors, this.material});
 }
 
-
-
-
 List<Product> demoProducts = [
   Product(
     id: 1,
     name: 'PERORMANCE',
     description: description,
-     price: 230,
+    price: 230,
     brandId: 1,
     brandName: 'Libra Sports',
     brandLogoUrl: 'assets/images/download.png',
@@ -77,55 +74,35 @@ List<Product> demoProducts = [
       ])
     ],
     variations: [
-      ProductVariation(
-          id: 0,
-          productId: 1,
-         
-          productVarientImages: [
-            'assets/images/product1image1.jpeg',
-            'assets/images/product1image2.jpeg',
-            'assets/images/product1image3.jpeg',
-          ],
-          productPropertiesValues: [
-            ProductPropertyAndValue(
-                property: 'Colors', value: Colors.black.toString()),
-            ProductPropertyAndValue(property: 'Size', value: 'One Size'),
-          ]),
-      ProductVariation(
-          id: 1,
-          productId: 1,
-          
-          productVarientImages: [
-            'assets/images/product1image4.jpeg',
-            'assets/images/product1image5.jpeg',
-            'assets/images/product1image6.jpeg',
-          ],
-          productPropertiesValues: [
-            ProductPropertyAndValue(
-                property: 'Colors', value: Colors.red.toString()),
-            ProductPropertyAndValue(property: 'Size', value: 'One Size'),
-          ]),
-      ProductVariation(
-          id: 2,
-          productId: 1,
-          productVarientImages: [
-            'assets/images/product1image7.jpeg',
-            'assets/images/product1image8.jpeg',
-            'assets/images/product1image9.jpeg',
-          ],
-          productPropertiesValues: [
-            ProductPropertyAndValue(
-                property: 'Colors', value: Colors.orange.toString()),
-            ProductPropertyAndValue(property: 'Size', value: 'One Size'),
-          ]),
+      ProductVariation(id: 0, productId: 1, productVarientImages: [
+        'assets/images/product1image1.jpeg',
+        'assets/images/product1image2.jpeg',
+        'assets/images/product1image3.jpeg',
+      ], productPropertiesValues: [
+        ProductPropertyAndValue(property: 'Size', value: 'One Size'),
+      ]),
+      ProductVariation(id: 1, productId: 1, productVarientImages: [
+        'assets/images/product1image4.jpeg',
+        'assets/images/product1image5.jpeg',
+        'assets/images/product1image6.jpeg',
+      ], productPropertiesValues: [
+        ProductPropertyAndValue(property: 'Size', value: 'One Size'),
+      ]),
+      ProductVariation(id: 2, productId: 1, productVarientImages: [
+        'assets/images/product1image7.jpeg',
+        'assets/images/product1image8.jpeg',
+        'assets/images/product1image9.jpeg',
+      ], productPropertiesValues: [
+        ProductPropertyAndValue(property: 'Size', value: 'One Size'),
+      ]),
     ],
   ),
-
+  
 
   Product(
       id: 2,
       name: 'TRAY',
-      price:  550,
+      price: 550,
       description: description,
       brandId: 2,
       brandName: 'Analya',
@@ -138,26 +115,20 @@ List<Product> demoProducts = [
         )
       ],
       variations: [
-        ProductVariation(
-            id: 0,
-            productId: 2,
-            
-            productVarientImages: [
-              'assets/images/product2image1.jpeg',
-              'assets/images/product2image2.jpeg',
-            ],
-            productPropertiesValues: [
-              ProductPropertyAndValue(property: 'Size', value: 'One Size')
-            ])
+        ProductVariation(id: 0, productId: 2, productVarientImages: [
+          'assets/images/product2image1.jpeg',
+          'assets/images/product2image2.jpeg',
+        ], productPropertiesValues: [
+          ProductPropertyAndValue(property: 'Size', value: 'One Size')
+        ])
       ]),
-
 
 
   Product(
       id: 3,
       name: 'Lightning T-Shirt',
       description: description,
-      price:  295,
+      price: 295,
       brandId: 3,
       brandName: 'Libra Sports',
       brandLogoUrl: 'assets/images/download.png',
@@ -172,30 +143,21 @@ List<Product> demoProducts = [
         ]),
       ],
       variations: [
-        ProductVariation(
-            id: 0,
-            productId: 3,
-            
-            productVarientImages: [
-              'assets/images/product3image1.jpeg',
-              'assets/images/product3image2.jpeg',
-              'assets/images/product3image3.jpeg',
-            ],
-            productPropertiesValues: [
-              ProductPropertyAndValue(property: 'Size', value: 'Large'),
-              ProductPropertyAndValue(property: 'Size', value: 'Small'),
-            ]),
-        ProductVariation(
-            id: 1,
-            productId: 3,
-            productVarientImages: [
-              'assets/images/product3image4.jpeg',
-              'assets/images/product3image5.jpeg',
-              'assets/images/product3image6.jpeg',
-            ],
-            productPropertiesValues: [
-              ProductPropertyAndValue(property: 'Size', value: 'Small'),
-            ]),
+        ProductVariation(id: 0, productId: 3, productVarientImages: [
+          'assets/images/product3image1.jpeg',
+          'assets/images/product3image2.jpeg',
+          'assets/images/product3image3.jpeg',
+        ], productPropertiesValues: [
+          ProductPropertyAndValue(property: 'Size', value: 'Large'),
+          ProductPropertyAndValue(property: 'Size', value: 'Small'),
+        ]),
+        ProductVariation(id: 1, productId: 3, productVarientImages: [
+          'assets/images/product3image4.jpeg',
+          'assets/images/product3image5.jpeg',
+          'assets/images/product3image6.jpeg',
+        ], productPropertiesValues: [
+          ProductPropertyAndValue(property: 'Size', value: 'Small'),
+        ]),
       ])
 ];
 

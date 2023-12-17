@@ -31,7 +31,6 @@ class _ColorDotsState extends State<ColorDots> {
                     color: widget.product.availableProperties[id].colors![index],
                     isSelected: index == selectedColor,
                     onTap: () {
-                      
                       setState(() {
                         selectedColor = index;
                       });
