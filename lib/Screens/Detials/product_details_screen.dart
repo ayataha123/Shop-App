@@ -17,8 +17,7 @@ class DetailsScreen extends StatefulWidget {
 }
 
 class _DetailsScreenState extends State<DetailsScreen> {
-
-  int selectedColor=0;
+  int selectedColor = 0;
   @override
   Widget build(BuildContext context) {
     final ProductDetailsArguments agrs =
@@ -30,7 +29,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
           const SizedBox(
             height: 16,
           ),
-          ProductImages(product: product, id: selectedColor,),
+          ProductImages(
+            product: product,
+            id: selectedColor,
+          ),
           const SizedBox(
             height: 16,
           ),
@@ -39,12 +41,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
             height: 8,
           ),
           ColorDots(
-            product: product, onColorSelected: (color) { 
+            product: product,
+            onColorSelected: (color) {
               setState(() {
-                selectedColor=color;
-                
+                selectedColor = color;
               });
-             },
+            },
           ),
           const SizedBox(
             height: 8,
@@ -84,7 +86,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
           const SizedBox(
             height: 16,
           ),
-        Describtion(product: product,),
+          Describtion(
+            product: product,
+          ),
         ],
       ),
     );

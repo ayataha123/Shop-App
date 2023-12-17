@@ -17,7 +17,7 @@ class ColorDots extends StatefulWidget {
 }
 
 class _ColorDotsState extends State<ColorDots> {
-  int selectedColor = 1;
+  int selectedColor = 0;
   int id = 0;
   @override
   Widget build(BuildContext context) {
