@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../model/product.dart';
-import 'product_images.dart';
 import 'property_dot.dart';
 
 class ColorDots extends StatefulWidget {
