@@ -69,7 +69,9 @@ class DetailsScreen extends StatelessWidget {
           MaterialDots(
             product: product,
           ),
-          
+          const SizedBox(
+            height: 16,
+          ),
         Describtion(product: product,),
         ],
       ),

@@ -19,7 +19,7 @@ class _ColorDotsState extends State<ColorDots> {
   int id=0;
   @override
   Widget build(BuildContext context) {
-    return widget.product.availableProperties[0].colors != null
+    return widget.product.availableProperties[id].colors != null
         ? Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(

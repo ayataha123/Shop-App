@@ -13,10 +13,17 @@ final Product product;
               borderRadius: BorderRadius.circular(8.0),
               child: Padding(
                 padding:const EdgeInsets.all(16.0),
-                child: Text(
-                 product.description ,
-                  style:const TextStyle(fontSize: 16.0),
-               ) ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                   const Text('Description',style: TextStyle(fontWeight: FontWeight.bold),),
+                   const SizedBox(height: 16,),
+                    Text(
+                     product.description ,
+                      style:const TextStyle(fontSize: 16.0),
+               ),
+                  ],
+                ) ),
      ),
     ) ;}
 }
