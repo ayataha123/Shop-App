@@ -5,11 +5,11 @@ import 'Screens/Products/Products_screen.dart';
 
 
 void main() {
-  runApp(const StoreApp());
+  runApp(const SlashApp());
 }
 
-class StoreApp extends StatelessWidget {
-  const StoreApp({super.key});
+class SlashApp extends StatelessWidget {
+  const SlashApp({super.key});
 
   @override
   Widget build(BuildContext context) {
