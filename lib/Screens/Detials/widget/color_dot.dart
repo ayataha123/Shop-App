@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../model/product.dart';
+import 'product_images.dart';
 import 'property_dot.dart';
 
 class ColorDots extends StatefulWidget {
@@ -33,8 +34,10 @@ class _ColorDotsState extends State<ColorDots> {
                         widget.product.availableProperties[id].colors![index],
                     isSelected: index == selectedColor,
                     onTap: () {
+                       
                       setState(() {
                         selectedColor = index;
+                        ProductImages(product:widget.product ,id: selectedColor,);
                       });
                     },
                     height: 40,
