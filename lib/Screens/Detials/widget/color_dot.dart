@@ -16,7 +16,7 @@ class ColorDots extends StatefulWidget {
 
 class _ColorDotsState extends State<ColorDots> {
   int selectedColor = 1;
-  int id=0;
+  int id = 0;
   @override
   Widget build(BuildContext context) {
     return widget.product.availableProperties[id].colors != null
@@ -29,7 +29,8 @@ class _ColorDotsState extends State<ColorDots> {
                     widget.product.availableProperties[id].colors!.length,
                     (index) {
                   return PropertyDot(
-                    color: widget.product.availableProperties[id].colors![index],
+                    color:
+                        widget.product.availableProperties[id].colors![index],
                     isSelected: index == selectedColor,
                     onTap: () {
                       setState(() {
@@ -49,6 +50,14 @@ class _ColorDotsState extends State<ColorDots> {
               ],
             ),
           )
-        : const SizedBox();
+        : const SizedBox(
+            height: 50,
+            child: Center(
+                child: Text(
+              'There is No Anther Color',
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.amber),
+            )),
+          );
   }
 }
